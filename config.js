@@ -18,7 +18,7 @@ const config = {
             define: {
                 timestamps: true,
                 underscored: true,
-          }
+          },
         },
         prod: {
             dialect: "postgres",
@@ -36,7 +36,7 @@ const config = {
     dialectOptions: {
         ssl: {
             require: true,
-            rejectUnauthorized: false
+            rejectUnauthorized: false,
             },
           },
         },

@@ -1,5 +1,5 @@
 const Posts = require('../models/posts.model')
-//const Users = require('../models/users.model')
+const Users = require('../models/users.model')
 
 const findAllPosts = async () => {
     const posts = await Posts.findAll({
