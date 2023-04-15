@@ -70,5 +70,7 @@ const deleteUser = (req, res) => {
 module.exports = {
     getAllUsers,
     getUserById,
-    postNewUser
+    postNewUser,
+    patchUser,
+    deleteUser
 }
