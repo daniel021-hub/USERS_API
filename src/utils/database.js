@@ -1,22 +1,8 @@
 const { Sequelize } = require('sequelize');
+const config = require('../../config')
 
-const db = new Sequelize({
-    dialect: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    database: 'users',
-    username: 'postgres',
-    password: 'root',
-    //Extra configs
-    define: {
-        timestamps: true,
-        underscored: true,
-    },
-    //Esta configuracion es para produccion
-    dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false
-        }
-    }
-})
+const environment = config.nodeEnv
+
+const db = new Sequelize(config.db[environment])
+
+module.exports = db
